@@ -1,0 +1,121 @@
+// Cores baseadas no layout da imagem
+$bg-card: #ffffff;
+$color-text-dark: #4a4a4a;
+$color-border: #eef2f5;
+
+$blue-primary: #5278db;
+$blue-hover: #3d61be;
+$red-delete: #d66474;
+$red-hover: #be4f5e;
+
+.card {
+  background-color: $bg-card;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;          // Reduzido o padding interno do card
+  max-width: 750px;         // Reduzido de 1000px para 750px (deixa a tabela mais estreita)
+  margin: 2rem auto;        // Centraliza na tela
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    color: $color-text-dark;
+    font-size: 1.4rem;      // Título sutilmente menor
+    font-weight: 600;
+  }
+}
+
+// Estilização da Tabela
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  th {
+    color: #8c8c8c;
+    font-size: 0.8rem;      // Texto do cabeçalho menor
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.6rem 0.5rem; // Altura do cabeçalho reduzida
+    border-bottom: 1px solid $color-border;
+  }
+
+  td {
+    color: $color-text-dark;
+    font-size: 0.9rem;      // Fonte dos dados ligeiramente menor
+    padding: 0.7rem 0.5rem; // Reduzido o padding (linhas ficam bem mais compactas)
+    border-bottom: 1px solid $color-border;
+    vertical-align: middle;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;            // Menor espaço entre os botões Editar e Deletar
+    padding-right: 0.5rem !important;
+  }
+}
+
+// Botões Menores e Mais Delicados
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.2rem;   // Botões mais compactos
+  font-size: 0.75rem;       // Fonte menor para os botões
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &--primary {
+    background-color: $blue-primary;
+    color: #ffffff;
+    padding: 0.5rem 1.6rem; // Ajuste no botão "Novo"
+
+    &:hover {
+      background-color: $blue-hover;
+    }
+  }
+
+  &--edit {
+    background-color: $blue-primary;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $blue-hover;
+    }
+  }
+
+  &--delete {
+    background-color: $red-delete;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $red-hover;
+    }
+  }
+}

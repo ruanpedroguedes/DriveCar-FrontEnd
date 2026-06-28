@@ -1,0 +1,42 @@
+/* Container do Formulário */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo da Label */
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo do Input */
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo do Botão */
+form button {
+    padding: 10px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #007d64;
+}

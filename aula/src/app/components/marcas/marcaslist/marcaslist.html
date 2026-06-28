@@ -1,0 +1,32 @@
+<div class="card">
+  <h2>Listagem de Marcas</h2>
+  <div>
+    <button (click)="adicionar()">Nova Marca</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (m of marcas; track m.id) {
+        <tr>
+          <td>{{ m.id }}</td>
+          <td>{{ m.nome }}</td>
+          
+          <td>
+            <button (click)="editar(m.id ?? 0)">Editar</button>
+            <button (click)="deletar(m.id ?? 0)">Deletar</button>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="3" style="text-align: center;">Nenhuma marca cadastrada.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
